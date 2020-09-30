@@ -69,31 +69,4 @@ var counter = setInterval(function () {
     clearInterval(counter);
     document.getElementById("counter").innerHTML = "Happy BirthDay";
   }
-}, 1000); // Cancel default scroll.
-
-document.addEventListener("scoll", function (e) {
-  e.preventDefault();
-}); // Use wheel event to simulate scroll.
-
-document.addEventListener("wheel", function (e) {
-  e.preventDefault(); // #e1 is 100vh, get height in pixels for conversion rate.
-
-  var pxPerVh = document.querySelector("#e1").offsetHeight / 100;
-  console.log("s", document.querySelector("#e1").offsetHeight, pxPerVh); // Current scroll.
-
-  var currScroll = document.body.scrollTop; // Modify scroll 100 vh
-
-  if (e.wheelDelta < 0) {
-    // scroll up
-    var newScroll = currScroll - 100 * pxPerVh;
-  } else if (e.wheelDelta > 0) {
-    // scroll down
-    var newScroll = currScroll + 100 * pxPerVh;
-  } else {
-    // no scroll
-    var newScroll = 0;
-  }
-
-  console.log("p", e.wheelDelta, currScroll, newScroll);
-  document.body.scrollTop = newScroll;
-});
+}, 1000);
