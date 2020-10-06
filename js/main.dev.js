@@ -69,4 +69,18 @@ var counter = setInterval(function () {
     clearInterval(counter);
     document.getElementById("counter").innerHTML = "Happy BirthDay";
   }
-}, 1000);
+}, 1000); // Clock
+
+var deg = 6;
+var hr = document.querySelector("#hr");
+var mn = document.querySelector("#mn");
+var sc = document.querySelector("#sc");
+setInterval(function () {
+  var ClockDay = new Date();
+  var ClockHour = ClockDay.getHours() * 30;
+  var ClockMin = ClockDay.getMinutes() * deg;
+  var ClockSec = ClockDay.getSeconds() * deg;
+  hr.style.transform = "rotateZ(".concat(ClockHour + ClockMin / 12, "deg)");
+  mn.style.transform = "rotateZ(".concat(ClockMin, "deg)");
+  sc.style.transform = "rotateZ(".concat(ClockSec, "deg)");
+});

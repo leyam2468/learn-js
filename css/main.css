@@ -197,6 +197,88 @@ body {
   background-color: #a51111;
 }
 
+.clock-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-sec .clock {
+  background: url(http://codersspot.in/wp-content/uploads/2020/03/clock.png);
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 4px solid #091921;
+  box-shadow: 0px -2px 3px rgba(255, 255, 255, 0.18), inset 0px -2px 15px rgba(255, 255, 255, 0.5), 0 15px 7px rgba(0, 0, 0, 0.3), inset -5px 4px 15px 5px rgba(0, 0, 0, 0.3);
+}
+.clock-sec .clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 8;
+}
+.clock-sec .clock .hour,
+.clock-sec .clock .min,
+.clock-sec .clock .sec {
+  position: absolute;
+}
+.clock-sec .clock .hr,
+.clock-sec .clock .mn,
+.clock-sec .clock .sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+.clock-sec .clock .hour,
+.clock-sec .clock .hr {
+  width: 160px;
+  height: 160px;
+}
+.clock-sec .clock .hr::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 80px;
+  background: #ff0000;
+  z-index: 8;
+  border-radius: 6px 6px 0 0;
+}
+.clock-sec .clock .min,
+.clock-sec .clock .mn {
+  width: 190px;
+  height: 190px;
+}
+.clock-sec .clock .mn::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #ffffff;
+  z-index: 8;
+  border-radius: 6px 6px 0 0;
+}
+.clock-sec .clock .sec,
+.clock-sec .clock .sc {
+  width: 230px;
+  height: 230px;
+}
+.clock-sec .clock .sc::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #777777;
+  z-index: 9;
+  border-radius: 6px 6px 0 0;
+}
+
 .h-100vh {
   height: 100vh;
 }
