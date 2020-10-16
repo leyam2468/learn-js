@@ -1,0 +1,75 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.slider .msg-cont {
+  width: 600px;
+  height: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.slider .msg-cont #slider {
+  display: inline-flex;
+  transition: 0.5s;
+}
+.slider .msg-cont .msg {
+  width: 600px;
+  height: 280px;
+  padding: 10px;
+}
+.slider .msg-cont .msg h1 {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.slider .msg-cont .msg p {
+  font-size: 20px;
+  color: #999;
+  margin-top: 10px;
+  line-height: 25px;
+}
+.slider .msg-cont .msg a {
+  padding: 10px 35px;
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.slider .cont {
+  width: 1px;
+  height: 320px;
+  display: block;
+  background-color: #c0c0c0;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+.slider .cont #line1,
+.slider .cont #line2,
+.slider .cont #line3,
+.slider .cont #line4 {
+  width: 10px;
+  height: 80px;
+  cursor: pointer;
+  transform: translateX(-50%);
+}
+.slider .cont #active {
+  width: 5px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
