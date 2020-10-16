@@ -159,186 +159,27 @@ a {
   text-transform: uppercase;
 }
 
-.count-down {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.count-down > div {
-  width: 150px;
-  height: 150px;
-  text-align: center;
-}
-.count-down > div span {
-  font-size: 3rem;
-  font-weight: bold;
-}
-.count-down > div p {
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-.quiz-sec {
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.quiz-sec .quiz-card {
-  overflow: hidden;
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 0 5px 5px rgba(177, 177, 177, 0.323);
-  color: black;
-  width: 500px;
-}
-.quiz-sec .quiz-card .question {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 10px 0;
-}
-.quiz-sec .quiz-card .question p {
-  font-size: 1rem;
-  margin-top: 10px;
-  color: #999;
-}
-.quiz-sec .quiz-card .answer {
-  padding: 1.2rem 1.5rem;
-  list-style: none;
-}
-.quiz-sec .quiz-card .answer li {
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-}
-.quiz-sec .quiz-card .answer li label {
-  margin-left: 10px;
-  font-size: 1.1rem;
-}
-.quiz-sec .quiz-card .send button {
-  font-weight: bold;
+  flex-direction: column;
   width: 100%;
-  height: 50px;
-  background-color: red;
-  color: white;
-  border: none;
-  outline: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-.quiz-sec .quiz-card .send button:hover {
-  background-color: #a51111;
-}
-
-.clock-sec {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.clock-sec .clock {
-  background: url(http://codersspot.in/wp-content/uploads/2020/03/clock.png);
-  width: 350px;
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  border-radius: 50%;
-  border: 4px solid #091921;
-  box-shadow: 2px -2px 3px rgba(255, 255, 255, 0.52), inset -1px -2px 15px rgba(255, 255, 255, 0.5), 2px -4px 2px 0px rgba(255, 255, 255, 0.45), inset 4px -12px 0px 0px rgba(167, 0, 0, 0.2);
-}
-.clock-sec .clock::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: #ff0404;
-  border-radius: 50%;
-  z-index: 8;
-}
-.clock-sec .clock .hour,
-.clock-sec .clock .min,
-.clock-sec .clock .sec {
-  position: absolute;
-}
-.clock-sec .clock .hr,
-.clock-sec .clock .mn,
-.clock-sec .clock .sc {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  border-radius: 50%;
-}
-.clock-sec .clock .hour,
-.clock-sec .clock .hr {
-  width: 160px;
-  height: 160px;
-}
-.clock-sec .clock .hr::before {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 80px;
-  background: #8e0000;
-  z-index: 8;
-  border-radius: 6px 6px 0 0;
-}
-.clock-sec .clock .min,
-.clock-sec .clock .mn {
-  width: 220px;
-  height: 220px;
-}
-.clock-sec .clock .mn::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 110px;
-  background: #ffffff;
-  z-index: 8;
-  border-radius: 6px 6px 0 0;
-}
-.clock-sec .clock .sec,
-.clock-sec .clock .sc {
-  width: 230px;
-  height: 230px;
-}
-.clock-sec .clock .sc::before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 150px;
-  background: #777777;
-  z-index: 9;
-  border-radius: 6px 6px 0 0;
-}
-
-.text-sec {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.text-sec h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.heart-sec {
-  position: relative;
-  overflow: hidden;
-}
-.heart-sec #hearts .heart {
-  position: absolute;
-  top: -1vh;
-  transform: translateY(0);
-  animation: fall 3s forwards;
-  font-size: 2rem;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-  }
-}
-.h-100vh {
   height: 100vh;
+  background-image: url(https://news.efinancialcareers.com/binaries/content/gallery/efinancial-careers/articles/2019/03/programmer.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.home h2 {
+  font-size: 5rem;
+  border-bottom: 1px solid #222;
+}
+.home h2 span {
+  color: red;
+}
+.home h3 {
+  font-size: 2.8rem;
+}
+.home h3 span {
+  color: red;
 }

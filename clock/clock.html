@@ -11,7 +11,8 @@
 			rel="stylesheet"
 		/>
 		
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="css/clock.css" />
     <!-- Scripts -->
     <!-- --Fontawesome -->
     <script
@@ -19,7 +20,7 @@
 			crossorigin="anonymous">
     </script>
     <!-- Title -->
-    <title>Learn-JS</title>
+    <title>Clock</title>
 </head>
 
 <body>
@@ -78,36 +79,6 @@
                     <span class="link-text">Slider 1</span>
                 </a>
             </div>
-            <!-- Winter -->
-            <div class="nav-item">
-                <a href="/clock/clock.html">
-                    <span class="link-icon"
-                        >
-                        <img src="img/snowing.svg" width="40px" alt="">
-                        </span>
-                    <span class="link-text">Winter Heatrs</span>
-                </a>
-            </div>
-            <!-- Clock -->
-            <div class="nav-item">
-                <a href="/clock/clock.html">
-                    <span class="link-icon"
-                        >
-                        <img src="img/wall-clock.svg" width="40px" alt="">
-                        </span>
-                    <span class="link-text">Clock</span>
-                </a>
-            </div>
-            <!-- Write Text -->
-            <div class="nav-item">
-                <a href="/clock/clock.html">
-                    <span class="link-icon"
-                        >
-                        <img src="img/write.svg" width="40px" alt="">
-                        </span>
-                    <span class="link-text">Write Text</span>
-                </a>
-            </div>
         </div>
         <!-- bottom -->
         <div class="navbar-bottom">
@@ -122,14 +93,38 @@
         </div>
 
     </nav>
-
-    <div class="home">
-        <h2>Axel<span>4</span>Design</h2>
-        <h3>Learn<span>-</span>JS</h3>
+    
+    <div class="clock-sec">
+        <div class="clock">
+            <div class="hour">
+                <div class="hr" id="hr"></div>
+            </div>
+            <div class="min">
+                <div class="mn" id="mn"></div>
+            </div>
+            <div class="sec">
+                <div class="sc" id="sc"></div>
+            </div>
+        </div>
     </div>
+    <script>
 
+// Clock********************************
+const deg = 6;
+const hr = document.querySelector("#hr");
+const mn = document.querySelector("#mn");
+const sc = document.querySelector("#sc");
 
-    <script src="js/main.dev.js"></script>
+setInterval(() => {
+    let ClockDay = new Date();
+    let ClockHour = ClockDay.getHours() * 30;
+    let ClockMin = ClockDay.getMinutes() * deg;
+    let ClockSec = ClockDay.getSeconds() * deg;
+
+    hr.style.transform = `rotateZ(${ClockHour + ClockMin / 12}deg)`;
+    mn.style.transform = `rotateZ(${ClockMin}deg)`;
+    sc.style.transform = `rotateZ(${ClockSec}deg)`;
+});
+    </script>
 </body>
-
 </html>

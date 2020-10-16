@@ -11,7 +11,8 @@
 			rel="stylesheet"
 		/>
 		
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="css/countdown.css" />
     <!-- Scripts -->
     <!-- --Fontawesome -->
     <script
@@ -19,7 +20,7 @@
 			crossorigin="anonymous">
     </script>
     <!-- Title -->
-    <title>Learn-JS</title>
+    <title>Count Down</title>
 </head>
 
 <body>
@@ -78,36 +79,6 @@
                     <span class="link-text">Slider 1</span>
                 </a>
             </div>
-            <!-- Winter -->
-            <div class="nav-item">
-                <a href="/clock/clock.html">
-                    <span class="link-icon"
-                        >
-                        <img src="img/snowing.svg" width="40px" alt="">
-                        </span>
-                    <span class="link-text">Winter Heatrs</span>
-                </a>
-            </div>
-            <!-- Clock -->
-            <div class="nav-item">
-                <a href="/clock/clock.html">
-                    <span class="link-icon"
-                        >
-                        <img src="img/wall-clock.svg" width="40px" alt="">
-                        </span>
-                    <span class="link-text">Clock</span>
-                </a>
-            </div>
-            <!-- Write Text -->
-            <div class="nav-item">
-                <a href="/clock/clock.html">
-                    <span class="link-icon"
-                        >
-                        <img src="img/write.svg" width="40px" alt="">
-                        </span>
-                    <span class="link-text">Write Text</span>
-                </a>
-            </div>
         </div>
         <!-- bottom -->
         <div class="navbar-bottom">
@@ -123,13 +94,60 @@
 
     </nav>
 
-    <div class="home">
-        <h2>Axel<span>4</span>Design</h2>
-        <h3>Learn<span>-</span>JS</h3>
+    
+    <div class="count-down" id="counter">
+        <div class="days">
+            <span id="days">0</span>
+            <p>Days</p>
+        </div>
+        <div class="hours">
+            <span id="hours">0</span>
+            <p>hours</p>
+        </div>
+        <div class="mins">
+            <span id="mins">0</span>
+            <p>mints</p>
+        </div>
+        <div class="sec">
+            <span id="sec">0</span>
+            <p>sec</p>
+        </div>
     </div>
+    <script>
+        
+// countDown*****************************
 
+let targetDay = new Date("13 jun 2021").getTime();
+const counter = setInterval(() => {
+    let nowTime = new Date().getTime();
 
-    <script src="js/main.dev.js"></script>
+    let distance = targetDay - nowTime;
+    // Days
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("days").innerHTML = days;
+    // Hours
+    let hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    document.getElementById("hours").innerHTML = hours;
+    // minutes
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById("mins").innerHTML = minutes;
+    // sac
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("sec").innerHTML = seconds;
+
+    //Days distance / (1000 * 60 * 60 * 24)
+    // hours (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    // min (distance % (1000 * 60 * 60)) / (1000 * 60)
+    // sac (distance % (1000 * 60)) / 1000
+
+    if (distance < 0) {
+        clearInterval(counter);
+        document.getElementById("counter").innerHTML = "Happy BirthDay";
+    }
+}, 1000);
+
+    </script>
 </body>
-
 </html>

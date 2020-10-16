@@ -1,0 +1,12 @@
+.text-sec {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+
+	h2 {
+		font-size: 2rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
