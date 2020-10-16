@@ -41,7 +41,7 @@ let auto = function () {
 };
 let intervel = setInterval(auto, 1000);
 
-// countDown
+// countDown*****************************
 
 let targetDay = new Date("13 jun 2021").getTime();
 const counter = setInterval(() => {
@@ -74,7 +74,7 @@ const counter = setInterval(() => {
     }
 }, 1000);
 
-// Clock
+// Clock********************************
 const deg = 6;
 const hr = document.querySelector("#hr");
 const mn = document.querySelector("#mn");
@@ -90,3 +90,39 @@ setInterval(() => {
     mn.style.transform = `rotateZ(${ClockMin}deg)`;
     sc.style.transform = `rotateZ(${ClockSec}deg)`;
 });
+
+// Write text**************************************
+const writeText = document.getElementById("writetext");
+let typing = "Welcome to My Site For Learn-Js.";
+let textletter = 0;
+
+let writeTextF = () => {
+    writeText.innerText = typing.slice(0, textletter);
+    textletter++;
+
+    if (textletter > typing.length) {
+        textletter = 0;
+    }
+};
+setInterval(writeTextF, 100);
+
+// Heart Section **********
+
+let hearts = document.getElementById("hearts");
+setInterval(() => {
+    const Heart = document.createElement("dvi");
+    Heart.classList.add("heart");
+
+    Heart.style.left = Math.random() * 100 + "vw";
+
+    console.log(Math.random() * 100 + "vw");
+    Heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+
+    Heart.innerText = "❤";
+
+    hearts.appendChild(Heart);
+
+    setTimeout(() => {
+        Heart.remove();
+    }, 5000);
+}, 300);

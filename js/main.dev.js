@@ -43,7 +43,7 @@ var auto = function auto() {
   }
 };
 
-var intervel = setInterval(auto, 1000); // countDown
+var intervel = setInterval(auto, 1000); // countDown*****************************
 
 var targetDay = new Date("13 jun 2021").getTime();
 var counter = setInterval(function () {
@@ -69,7 +69,7 @@ var counter = setInterval(function () {
     clearInterval(counter);
     document.getElementById("counter").innerHTML = "Happy BirthDay";
   }
-}, 1000); // Clock
+}, 1000); // Clock********************************
 
 var deg = 6;
 var hr = document.querySelector("#hr");
@@ -83,4 +83,33 @@ setInterval(function () {
   hr.style.transform = "rotateZ(".concat(ClockHour + ClockMin / 12, "deg)");
   mn.style.transform = "rotateZ(".concat(ClockMin, "deg)");
   sc.style.transform = "rotateZ(".concat(ClockSec, "deg)");
-});
+}); // Write text**************************************
+
+var writeText = document.getElementById("writetext");
+var typing = "Welcome to My Site For Learn-Js.";
+var textletter = 0;
+
+var writeTextF = function writeTextF() {
+  writeText.innerText = typing.slice(0, textletter);
+  textletter++;
+
+  if (textletter > typing.length) {
+    textletter = 0;
+  }
+};
+
+setInterval(writeTextF, 100); // Heart Section **********
+
+var hearts = document.getElementById("hearts");
+setInterval(function () {
+  var Heart = document.createElement("dvi");
+  Heart.classList.add("heart");
+  Heart.style.left = Math.random() * 100 + "vw";
+  console.log(Math.random() * 100 + "vw");
+  Heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+  Heart.innerText = "❤";
+  hearts.appendChild(Heart);
+  setTimeout(function () {
+    Heart.remove();
+  }, 5000);
+}, 300);
