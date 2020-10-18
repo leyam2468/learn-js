@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	color: white;
+	background-color: #121212;
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	&::-webkit-scrollbar {
+		width: 0.25rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #d63031;
+	}
+}
+a {
+	text-decoration: none;
+}
+
+.app {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	header {
+		margin: 50px 0;
+		h2 {
+			font-size: 3rem;
+			span {
+				color: red;
+			}
+		}
+		p {
+			text-align: center;
+			letter-spacing: 3px;
+		}
+	}
+	.visual {
+		> div {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			bottom: 0;
+		}
+	}
+	.taps {
+		z-index: 2;
+		display: flex;
+		width: 100%;
+
+		> div {
+			height: 100px;
+			width: 100px;
+			flex: 1;
+			transition: 300ms;
+			&:hover {
+				transform: translateY(10px);
+			}
+		}
+		.tap1 {
+			background-color: red;
+		}
+		.tap2 {
+			background-color: rgb(0, 172, 86);
+		}
+		.tap3 {
+			background-color: rgb(26, 12, 109);
+		}
+		.tap4 {
+			background-color: rgb(169, 0, 84);
+		}
+		.tap5 {
+			background-color: rgb(5, 144, 175);
+		}
+		.tap6 {
+			background-color: rgb(121, 3, 150);
+		}
+		.tap7 {
+			background-color: rgb(115, 179, 13);
+		}
+		.tap8 {
+			background-color: rgb(138, 6, 112);
+		}
+	}
+}
+
+@keyframes jump {
+	0% {
+		bottom: 0;
+		left: 50%;
+	}
+	50% {
+		bottom: 50%;
+		transform: scale(10);
+	}
+	100% {
+		opacity: 0;
+	}
+}

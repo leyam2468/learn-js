@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: #121212;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+  background: #d63031;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.app header {
+  margin: 50px 0;
+}
+.app header h2 {
+  font-size: 3rem;
+}
+.app header h2 span {
+  color: red;
+}
+.app header p {
+  text-align: center;
+  letter-spacing: 3px;
+}
+.app .visual > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 0;
+}
+.app .taps {
+  z-index: 2;
+  display: flex;
+  width: 100%;
+}
+.app .taps > div {
+  height: 100px;
+  width: 100px;
+  flex: 1;
+  transition: 300ms;
+}
+.app .taps > div:hover {
+  transform: translateY(10px);
+}
+.app .taps .tap1 {
+  background-color: red;
+}
+.app .taps .tap2 {
+  background-color: #00ac56;
+}
+.app .taps .tap3 {
+  background-color: #1a0c6d;
+}
+.app .taps .tap4 {
+  background-color: #a90054;
+}
+.app .taps .tap5 {
+  background-color: #0590af;
+}
+.app .taps .tap6 {
+  background-color: #790396;
+}
+.app .taps .tap7 {
+  background-color: #73b30d;
+}
+.app .taps .tap8 {
+  background-color: #8a0670;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+    left: 50%;
+  }
+  50% {
+    bottom: 50%;
+    transform: scale(10);
+  }
+  100% {
+    opacity: 0;
+  }
+}
