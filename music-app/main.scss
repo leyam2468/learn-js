@@ -1,0 +1,98 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	color: white;
+	background-color: #121212;
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	&::-webkit-scrollbar {
+		width: 0.25rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #d63031;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+.side-area {
+	width: 25%;
+	height: 100vh;
+	background-color: black;
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		width: 0.1rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #d63031;
+	}
+	.logo {
+		padding: 10px;
+		text-align: center;
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		border-bottom: 1px solid #222;
+		margin-bottom: 10px;
+		span {
+			color: red;
+		}
+	}
+	.active {
+		background-color: #222;
+	}
+	.music-item {
+		width: 100%;
+		height: 60px;
+		margin-bottom: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		padding: 0 15px;
+		&:hover {
+			background-color: #111;
+		}
+		img {
+			border-radius: 50%;
+		}
+		.music-name {
+			text-align: center;
+			span {
+				display: block;
+			}
+			.name {
+				font-size: 1.2rem;
+				font-weight: bold;
+			}
+			.time {
+				color: #888;
+			}
+		}
+		.music-options {
+			color: #888;
+		}
+	}
+}
+main {
+	width: 75%;
+	height: 100vh;
+	position: absolute;
+	right: 0;
+}
