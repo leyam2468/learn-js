@@ -67,7 +67,7 @@ a {
 		cursor: pointer;
 		padding: 0 15px;
 		&:hover {
-			background-color: #111;
+			background-color: #222;
 		}
 		img {
 			border-radius: 50%;
@@ -95,4 +95,5 @@ main {
 	height: 100vh;
 	position: absolute;
 	right: 0;
+	padding: 20px;
 }

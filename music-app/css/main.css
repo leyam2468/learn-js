@@ -67,7 +67,7 @@ a {
   padding: 0 15px;
 }
 .side-area .music-item:hover {
-  background-color: #111;
+  background-color: #222;
 }
 .side-area .music-item img {
   border-radius: 50%;
@@ -94,4 +94,5 @@ main {
   height: 100vh;
   position: absolute;
   right: 0;
+  padding: 20px;
 }

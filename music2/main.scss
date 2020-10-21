@@ -1,0 +1,77 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	color: white;
+	background-color: #121212;
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	&::-webkit-scrollbar {
+		width: 0.25rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #d63031;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+.app {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	.time-select {
+		display: flex;
+		flex-direction: column;
+	}
+	.sound-picker {
+		display: flex;
+		flex-direction: column;
+	}
+	button {
+		padding: 10px;
+		border: 1px solid white;
+		color: white;
+		margin: 5px 0;
+		background-color: transparent;
+		transition: 300ms;
+		font-size: 1.2rem;
+		outline: none;
+
+		cursor: pointer;
+		&:hover {
+			color: black;
+			background-color: white;
+		}
+	}
+	.active {
+		outline: none;
+		border: none;
+		background-color: darkred;
+	}
+	.player-contaner {
+		width: 50%;
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		i {
+			transition: 300ms;
+			&:hover {
+				color: red;
+			}
+		}
+		span {
+			font-size: 2rem;
+		}
+	}
+}
