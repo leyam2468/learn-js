@@ -79,8 +79,7 @@ a {
   display: block;
 }
 .side-area .music-item .music-name .name {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.1rem;
 }
 .side-area .music-item .music-name .time {
   color: #888;
@@ -94,5 +93,4 @@ main {
   height: 100vh;
   position: absolute;
   right: 0;
-  padding: 20px;
 }
