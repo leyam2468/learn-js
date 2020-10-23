@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Music-App V2</title>
+		<!----------------- Links ---------------->
+		<!-- Font -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- --Fontawesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+			integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+			crossorigin="anonymous"
+		/>
+
+		<!-- Man Css -->
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<!-- Playlist Aera -->
+		<div class="side-area">
+			<!-- Logo -->
+			<div class="logo">
+				Music<span>-</span>App <i class="fas fa-music"></i>
+			</div>
+			<!-- playlist Music -->
+			<div class="playlist"></div>
+		</div>
+		<!-- Main Audio Content -->
+		<div class="main">
+			<audio
+				src=""
+				class="source-audio"
+				type="audio/mp3"
+				preload="metadata"
+				src="./مهرجان هنعمل لغبطيطا (وركبت الاكس 6 ) حسن شاكوش و عمر كمال 2020 by محمد رمضان و ميتري جيمس - يا حبيبي - Free Listening on SoundCloud_2.mp3"
+			></audio>
+
+			<div class="controller">
+				<div class="progres">
+					<span class="curr-time">0:0</span>
+					<input
+						type="range"
+						class="audo-range"
+						readonly
+						min="0"
+						max="100"
+						value="0"
+					/>
+					<span class="all-time">0:0</span>
+				</div>
+				<div class="control">
+					<div class="random">
+						<i class="fas fa-random fa-2x"></i>
+					</div>
+					<div class="left">
+						<i class="fas fa-angle-double-left fa-2x"></i>
+					</div>
+					<div class="add10">x10</div>
+					<div class="play" onclick="play()">
+						<i class="fas fa-play fa-2x" id="icon-play"></i>
+					</div>
+					<div class="back10">-x10</div>
+					<div class="right">
+						<i class="fas fa-angle-double-right fa-2x"></i>
+					</div>
+					<div class="mute">
+						<i class="fas fa-volume-mute fa-2x"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="main.js"></script>
+	</body>
+</html>
