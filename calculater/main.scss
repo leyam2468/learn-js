@@ -1,0 +1,101 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #121212;
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	height: 100vh;
+	&::-webkit-scrollbar {
+		width: 0.25rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #d63031;
+	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+.calculater {
+	width: 350px;
+	height: 520px;
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 1px 1px 5px red;
+	.results {
+		height: 120px;
+		.history {
+			color: #919191;
+			font-size: 15px;
+			text-align: right;
+			padding: 20px;
+			height: 20px;
+		}
+		.output {
+			padding: 20px;
+			text-align: right;
+			font-size: 30px;
+			font-weight: 400;
+		}
+	}
+	.key {
+		height: 400px;
+		width: 100%;
+		display: inline-grid;
+		grid-template-columns: auto auto auto auto;
+		.oparator,
+		.number,
+		.empty {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin: auto;
+			border: 0;
+			font-weight: bold;
+			font-size: 1.2rem;
+			outline: none;
+			cursor: pointer;
+			transition: 200ms;
+			&:active {
+				font-size: 1rem;
+			}
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		.number,
+		.empty {
+			background-color: white;
+		}
+		.oparator {
+			color: white;
+			font-size: 1.25rem;
+			background-color: gray;
+			&:nth-child(4) {
+				background-color: darkred;
+			}
+			&:nth-child(8) {
+				background-color: darkgreen;
+			}
+			&:nth-child(12) {
+				background-color: darkblue;
+			}
+			&:nth-child(16) {
+				background-color: darkmagenta;
+			}
+			&:nth-child(20) {
+				background-color: black;
+			}
+		}
+	}
+}

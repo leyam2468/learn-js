@@ -11,14 +11,9 @@ var mySong = [{
   time: '5:47',
   srcImg: 'https://i1.sndcdn.com/artworks-000210714414-u31uaj-t500x500.jpg',
   src: './Happier (ft. Bastille) by marshmello.mp3'
-}, {
-  name: 'Ed Sheeran - Perfect',
-  time: '5:47',
-  srcImg: 'https://i1.sndcdn.com/artworks-000210714414-u31uaj-t500x500.jpg',
-  src: 'https://www.youtube.com/watch?v=ikNtgHvEfWY'
 }];
 
-var Addsongs = function Addsongs(song) {
+var AddsongsEl = function AddsongsEl(song) {
   // Create Content Elm Firest
   var audioEl = "\n\t<img\n\tsrc=\"".concat(song.srcImg, "\"\n\talt=\"").concat(song.name, "\"\n\twidth=\"60px\"\n\t/>\n\t<div class=\"music-name\">\n\t\t<span class=\"name\">").concat(song.name, "</span>\n\t\t<span class=\"time\">").concat(song.time, "</span>\n\t</div>\n\t<div class=\"music-options\">\n\t\t<i class=\"fas fa-ellipsis-v\"></i>\n\t</div>"); // Create Perant El For Content
 
@@ -36,11 +31,12 @@ var Addsongs = function Addsongs(song) {
 
 for (var _i = 0, _mySong = mySong; _i < _mySong.length; _i++) {
   var song = _mySong[_i];
-  Addsongs(song);
+  AddsongsEl(song);
 }
 
 var musicItem = document.querySelectorAll('.music-item');
 var sourceAudio = document.querySelector('.source-audio');
+musicItem[0].classList.add('active');
 musicItem.forEach(function (item, index) {
   item.addEventListener('click', function () {
     // Remover Active Class
@@ -79,4 +75,4 @@ sourceAudio.duration;
 sourceAudio.onloadedmetadata = function () {
   document.querySelector('.audo-range').setAttribute('max', sourceAudio.duration);
   document.querySelector('.all-time').innerText = "".concat(Math.floor(sourceAudio.duration / 60), ":").concat(Math.floor(sourceAudio.duration % 60), " ");
-};
+}; // ************************

@@ -16,16 +16,9 @@ const mySong = [
 			'https://i1.sndcdn.com/artworks-000210714414-u31uaj-t500x500.jpg',
 		src: './Happier (ft. Bastille) by marshmello.mp3',
 	},
-	{
-		name: 'Ed Sheeran - Perfect',
-		time: '5:47',
-		srcImg:
-			'https://i1.sndcdn.com/artworks-000210714414-u31uaj-t500x500.jpg',
-		src: 'https://www.youtube.com/watch?v=ikNtgHvEfWY',
-	},
 ];
 
-let Addsongs = (song) => {
+let AddsongsEl = (song) => {
 	// Create Content Elm Firest
 	let audioEl = `
 	<img
@@ -47,17 +40,19 @@ let Addsongs = (song) => {
 	// Add data Atttr
 	audioItem.setAttribute('data-src', song.src);
 	audioItem.setAttribute('data-time', song.time);
+
 	// add Cont To Parent
 	audioItem.innerHTML = audioEl;
 	// Add All To Page
 	playlist.appendChild(audioItem);
 };
 for (const song of mySong) {
-	Addsongs(song);
+	AddsongsEl(song);
 }
 
 const musicItem = document.querySelectorAll('.music-item');
 const sourceAudio = document.querySelector('.source-audio');
+musicItem[0].classList.add('active');
 
 musicItem.forEach((item, index) => {
 	item.addEventListener('click', function () {
@@ -107,3 +102,4 @@ sourceAudio.onloadedmetadata = function () {
 		sourceAudio.duration / 60
 	)}:${Math.floor(sourceAudio.duration % 60)} `;
 };
+// ************************
