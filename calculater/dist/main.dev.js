@@ -86,6 +86,7 @@ numbers = document.querySelectorAll('.number');
 numbers.forEach(function (numberr) {
   numberr.addEventListener('click', function () {
     var output = reverseNumberFromating(getOutput());
+    console.log(reverseNumberFromating(this.id));
 
     if (output != NaN) {
       output += this.id;

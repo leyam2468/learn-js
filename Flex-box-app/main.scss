@@ -1,0 +1,88 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	color: white;
+	background-color: #121212;
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	&::-webkit-scrollbar {
+		width: 0.25rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #d63031;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+.logo {
+	font-size: 3rem;
+	text-align: center;
+	font-weight: bold;
+	margin: 20px 0;
+	border-bottom: 1px solid #222;
+	span {
+		color: red;
+	}
+}
+.view-cont {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	div > span {
+		font-size: 1.2rem;
+		margin-left: 20px;
+		font-weight: bold;
+	}
+	div > input {
+		padding: 8px;
+		border: none;
+		outline: none;
+		background-color: #555;
+		color: white;
+	}
+	div > button {
+		padding: 8px 10px;
+		margin-left: 10px;
+		border: 1px solid #888;
+		outline: none;
+		border-radius: 3px;
+		background-color: transparent;
+		color: white;
+		transition: all 500ms ease-in-out;
+		&:hover {
+			background-color: white;
+			color: black;
+		}
+	}
+}
+.view {
+	width: 80%;
+	height: 50vh;
+	border-radius: 3px;
+	border: 1px solid #444;
+	background-color: #333;
+	margin: 20px auto;
+	display: flex;
+	box-shadow: 1px -1px 4px #bdbdbd59;
+	.child {
+		width: 100px;
+		height: 100px;
+		text-align: center;
+		background-color: red;
+		border-radius: 3px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		margin: 5px;
+	}
+}
