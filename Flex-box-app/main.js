@@ -8,6 +8,7 @@ let apllyBTN = document.querySelector('.aplly');
 
 // Set MinHeight
 view.style.minHeight = `50vh`;
+view.style.minWidth = `300px`;
 // set new Height
 viewHeightInput.value = view.offsetHeight;
 // set new Width
