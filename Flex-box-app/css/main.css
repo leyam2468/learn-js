@@ -73,6 +73,7 @@ a {
   border: 1px solid #444;
   background-color: #333;
   margin: 20px auto;
+  padding: 5px;
   display: flex;
   box-shadow: 1px -1px 4px #bdbdbd59;
 }
@@ -86,5 +87,42 @@ a {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin: 5px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.controls .flex-item {
+  border-bottom: 1px solid #222;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+}
+.controls .flex-item div {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  border-right: 1px solid #888;
+  border-left: 1px solid #888;
+  transition: 300ms;
+}
+.controls .flex-item div:hover {
+  background-color: #222;
+}
+.controls .flex-item h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-right: 40px;
+  width: 250px;
+}
+.controls .flex-item label {
+  font-size: 1rem;
+  margin-left: 5px;
+  cursor: pointer;
 }
