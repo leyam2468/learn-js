@@ -74,7 +74,9 @@ a {
 	padding: 5px;
 	display: flex;
 	box-shadow: 1px -1px 4px #bdbdbd59;
+	transition: all 0.5s ease;
 	.child {
+		cursor: pointer;
 		width: 100px;
 		height: 100px;
 		text-align: center;
@@ -116,6 +118,10 @@ a {
 			text-transform: uppercase;
 			margin-right: 40px;
 			width: 250px;
+		}
+		input:checked {
+			width: 20px;
+			height: 20px;
 		}
 		label {
 			font-size: 1rem;

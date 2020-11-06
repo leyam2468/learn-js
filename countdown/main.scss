@@ -1,5 +1,13 @@
-.count-down {
+body {
+	background-color: #121212;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	height: 100vh;
+	font-family: monospace;
+}
+.count-down {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -8,7 +16,6 @@
 		width: 150px;
 		height: 150px;
 		text-align: center;
-
 		span {
 			font-size: 3rem;
 			font-weight: bold;
@@ -18,5 +25,8 @@
 			font-size: 2rem;
 			text-transform: uppercase;
 		}
+	}
+	.sec span {
+		color: red;
 	}
 }

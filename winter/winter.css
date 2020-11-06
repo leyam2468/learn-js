@@ -1,0 +1,30 @@
+.heart-sec {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.heart-sec #hearts .heart {
+  position: absolute;
+  top: -1vh;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: fall 3s forwards;
+          animation: fall 3s forwards;
+  font-size: 2rem;
+}
+
+@-webkit-keyframes fall {
+  to {
+    -webkit-transform: translateY(110vh);
+            transform: translateY(110vh);
+  }
+}
+
+@keyframes fall {
+  to {
+    -webkit-transform: translateY(110vh);
+            transform: translateY(110vh);
+  }
+}
+/*# sourceMappingURL=winter.css.map */
