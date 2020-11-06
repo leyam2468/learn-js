@@ -1,20 +1,50 @@
-.clock-sec {
+body {
+  background-color: #121212;
+  color: white;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
+.clock-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .clock-sec .clock {
   background: url(http://codersspot.in/wp-content/uploads/2020/03/clock.png);
   width: 350px;
   height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-size: cover;
   border-radius: 50%;
   border: 4px solid #091921;
-  box-shadow: 2px -2px 3px rgba(255, 255, 255, 0.52), inset -1px -2px 15px rgba(255, 255, 255, 0.5), 2px -4px 2px 0px rgba(255, 255, 255, 0.45), inset 4px -12px 0px 0px rgba(167, 0, 0, 0.2);
+  -webkit-box-shadow: 3px -1px #f70a0a27;
+          box-shadow: 3px -1px #f70a0a27;
 }
+
 .clock-sec .clock::before {
   content: "";
   position: absolute;
@@ -24,24 +54,32 @@
   border-radius: 50%;
   z-index: 8;
 }
+
 .clock-sec .clock .hour,
 .clock-sec .clock .min,
 .clock-sec .clock .sec {
   position: absolute;
 }
+
 .clock-sec .clock .hr,
 .clock-sec .clock .mn,
 .clock-sec .clock .sc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   border-radius: 50%;
 }
+
 .clock-sec .clock .hour,
 .clock-sec .clock .hr {
   width: 160px;
   height: 160px;
 }
+
 .clock-sec .clock .hr::before {
   content: "";
   position: absolute;
@@ -51,11 +89,13 @@
   z-index: 8;
   border-radius: 6px 6px 0 0;
 }
+
 .clock-sec .clock .min,
 .clock-sec .clock .mn {
   width: 220px;
   height: 220px;
 }
+
 .clock-sec .clock .mn::before {
   content: "";
   position: absolute;
@@ -65,11 +105,13 @@
   z-index: 8;
   border-radius: 6px 6px 0 0;
 }
+
 .clock-sec .clock .sec,
 .clock-sec .clock .sc {
   width: 230px;
   height: 230px;
 }
+
 .clock-sec .clock .sc::before {
   content: "";
   position: absolute;

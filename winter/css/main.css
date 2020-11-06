@@ -1,7 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  height: 100vh;
+}
+
 .heart-sec {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
 }
 
 .heart-sec #hearts .heart {
@@ -27,4 +40,3 @@
             transform: translateY(110vh);
   }
 }
-/*# sourceMappingURL=winter.css.map */
