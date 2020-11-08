@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: #121212;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  height: 5000px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d63031;
+}
+
+a {
+  text-decoration: none;
+}
+
+.banner {
+  height: 100vh;
+  background-color: black;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+.banner .btn {
+  padding: 10px 50px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #555;
+  font-size: 1.3rem;
+  font-weight: bold;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 5px #747474;
+          box-shadow: 0px 2px 5px #747474;
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  -webkit-transform: translateX(50%) translateY(50%);
+          transform: translateX(50%) translateY(50%);
+}
+
+.banner .btn:hover {
+  background-color: red;
+}
+
+.banner .active {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  -webkit-transform: unset;
+          transform: unset;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: darkred;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
