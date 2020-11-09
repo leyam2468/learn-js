@@ -23,54 +23,74 @@ a {
   text-decoration: none;
 }
 
-.app {
+.side-area {
+  width: 25%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  background-color: black;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-.app .time-select {
-  display: flex;
-  flex-direction: column;
+.side-area::-webkit-scrollbar {
+  width: 0.1rem;
 }
-.app .sound-picker {
-  display: flex;
-  flex-direction: column;
+.side-area::-webkit-scrollbar-track {
+  background: #1e1e24;
 }
-.app button {
+.side-area::-webkit-scrollbar-thumb {
+  background: #d63031;
+}
+.side-area .logo {
   padding: 10px;
-  border: 1px solid white;
-  color: white;
-  margin: 5px 0;
-  background-color: transparent;
-  transition: 300ms;
-  font-size: 1.2rem;
-  outline: none;
-  cursor: pointer;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #222;
+  margin-bottom: 10px;
 }
-.app button:hover {
-  color: black;
-  background-color: white;
-}
-.app .active {
-  outline: none;
-  border: none;
-  background-color: darkred;
-}
-.app .player-contaner {
-  width: 50%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-.app .player-contaner i {
-  transition: 300ms;
-}
-.app .player-contaner i:hover {
+.side-area .logo span {
   color: red;
 }
-.app .player-contaner span {
-  font-size: 2rem;
+.side-area .active {
+  background-color: #222;
+}
+.side-area .music-item {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 15px;
+}
+.side-area .music-item:hover {
+  background-color: #222;
+}
+.side-area .music-item img {
+  border-radius: 50%;
+}
+.side-area .music-item .music-name {
+  text-align: center;
+}
+.side-area .music-item .music-name span {
+  display: block;
+}
+.side-area .music-item .music-name .name {
+  font-size: 1.1rem;
+}
+.side-area .music-item .music-name .time {
+  color: #888;
+}
+.side-area .music-item .music-options {
+  color: #888;
+}
+
+main {
+  width: 75%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
 }

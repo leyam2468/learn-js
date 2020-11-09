@@ -23,55 +23,75 @@ body {
 a {
 	text-decoration: none;
 }
-.app {
+.side-area {
+	width: 25%;
 	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	.time-select {
-		display: flex;
-		flex-direction: column;
+	background-color: black;
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		width: 0.1rem;
 	}
-	.sound-picker {
-		display: flex;
-		flex-direction: column;
-	}
-	button {
-		padding: 10px;
-		border: 1px solid white;
-		color: white;
-		margin: 5px 0;
-		background-color: transparent;
-		transition: 300ms;
-		font-size: 1.2rem;
-		outline: none;
 
-		cursor: pointer;
-		&:hover {
-			color: black;
-			background-color: white;
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #d63031;
+	}
+	.logo {
+		padding: 10px;
+		text-align: center;
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		border-bottom: 1px solid #222;
+		margin-bottom: 10px;
+		span {
+			color: red;
 		}
 	}
 	.active {
-		outline: none;
-		border: none;
-		background-color: darkred;
+		background-color: #222;
 	}
-	.player-contaner {
-		width: 50%;
-		height: 50%;
+	.music-item {
+		width: 100%;
+		height: 60px;
+		margin-bottom: 5px;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
-		justify-content: space-around;
-		i {
-			transition: 300ms;
-			&:hover {
-				color: red;
+		justify-content: space-between;
+		cursor: pointer;
+		padding: 0 15px;
+		&:hover {
+			background-color: #222;
+		}
+		img {
+			border-radius: 50%;
+		}
+		.music-name {
+			text-align: center;
+			span {
+				display: block;
+			}
+			.name {
+				font-size: 1.1rem;
+			}
+			.time {
+				color: #888;
 			}
 		}
-		span {
-			font-size: 2rem;
+		.music-options {
+			color: #888;
 		}
 	}
+}
+main {
+	width: 75%;
+	height: 100vh;
+	position: absolute;
+	right: 0;
 }

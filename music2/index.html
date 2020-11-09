@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Meditation App</title>
+		<title>Music 2</title>
 		<!----------------- Links ---------------->
 		<!-- Font -->
 		<link
@@ -23,33 +23,25 @@
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
-		<div class="app">
-			<!-- Time -->
-			<div class="time-select">
-				<button data-time="120">2 Minutes</button>
-				<button data-time="300">5 Minutes</button>
-				<button data-time="600">10 Minutes</button>
+		<div class="side-area">
+			<!-- Logo -->
+			<div class="logo">
+				Music<span>-</span>2 <i class="fas fa-music"></i>
 			</div>
-			<!-- Continer -->
-			<div class="player-contaner">
-				<audio
-					class="song"
-					src="https://soundcloud.com/qanawatlcd/laghbtita-1"
-				></audio>
-
-				<i class="fas fa-play fa-5x play"></i>
-				<span class="time">00:00</span>
-			</div>
-			<!-- Audio -->
-			<div class="sound-picker">
-				<button data-src="./Happier (ft. Bastille) by marshmello.mp3">
-					Happier
-				</button>
-				<button data-src="./Hello - Adele by Grace Davies.mp3">
-					Hello
-				</button>
-			</div>
+			<!-- playlist Music -->
+			<div class="playlist"></div>
 		</div>
+		<main>
+			<iframe
+				class="audio-player"
+				width="100%"
+				height="100%"
+				scrolling="no"
+				frameborder="no"
+				allow="autoplay"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/915556366&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+			></iframe>
+		</main>
 		<!-- Scripts -->
 		<script src="main.js"></script>
 	</body>
