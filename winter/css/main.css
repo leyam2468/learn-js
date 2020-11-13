@@ -15,6 +15,7 @@ body {
   position: relative;
   overflow: hidden;
   height: 100%;
+  color: red;
 }
 
 .heart-sec #hearts .heart {
