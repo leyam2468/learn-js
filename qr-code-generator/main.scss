@@ -12,8 +12,8 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	position: relative;
-	background: url(background-image-repeating-qr-code-154082329.jpg);
-
+	background: url(https://images.unsplash.com/photo-1550482781-48d477e61c72?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+	background-size: cover;
 	&::after {
 		position: absolute;
 		content: "";

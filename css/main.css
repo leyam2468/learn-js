@@ -67,7 +67,7 @@ a {
   transition: 300ms;
 }
 
-.navbar .navbar-logo .logo-item a {
+.navbar .navbar-logo .logo-item div {
   color: white;
   width: 100%;
   height: 100%;
@@ -80,22 +80,22 @@ a {
           align-items: center;
 }
 
-.navbar .navbar-logo .logo-item a .logo-icon {
+.navbar .navbar-logo .logo-item div .logo-icon {
   width: 40px;
 }
 
-.navbar .navbar-logo .logo-item a .logo-icon i {
+.navbar .navbar-logo .logo-item div .logo-icon i {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-.navbar .navbar-logo .logo-item a .logo-text {
+.navbar .navbar-logo .logo-item div .logo-text {
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.navbar .navbar-logo .logo-item a .logo-text span {
+.navbar .navbar-logo .logo-item div .logo-text span {
   color: red;
 }
 
