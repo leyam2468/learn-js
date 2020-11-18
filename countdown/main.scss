@@ -1,20 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
 	background-color: #121212;
 	color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	height: 100vh;
 	font-family: monospace;
+}
+.h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.h2 {
+	margin: 20px 0;
+	font-size: 6rem;
 }
 .count-down {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	background-color: #333;
+	width: 100%;
+	padding: 30px 0;
 	> div {
 		width: 150px;
-		height: 150px;
 		text-align: center;
 		span {
 			font-size: 3rem;
@@ -26,7 +43,7 @@ body {
 			text-transform: uppercase;
 		}
 	}
-	.sec span {
+	.sec {
 		color: red;
 	}
 }
