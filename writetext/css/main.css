@@ -1,7 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-color: #121212;
   color: white;
   font-family: monospace;
+}
+
+.text-sec2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.text-sec2 h2 {
+  position: relative;
+  font-size: 12em;
+  color: black;
+  -webkit-text-stroke: 0.2rem #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 3px 1px #ffffff3b;
+}
+
+.text-sec2 h2::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-text);
+  color: red;
+  -webkit-text-stroke: 0.3vw #333;
+  width: 0;
+  height: 100%;
+  border-right: 5px solid #333;
+  overflow: hidden;
+  -webkit-animation: typing 6s linear infinite;
+          animation: typing 6s linear infinite;
+}
+
+@-webkit-keyframes typing {
+  0%,
+  10%,
+  100% {
+    width: 0%;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  0%,
+  10%,
+  100% {
+    width: 0%;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
 }
 
 .text-sec {
@@ -18,7 +87,12 @@ body {
 }
 
 .text-sec h2 {
-  font-size: 2rem;
-  font-weight: bold;
+  position: relative;
+  font-size: 3rem;
+  color: red;
+  -webkit-text-stroke: 0.1rem #333;
   text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 1px #ffffff3b;
+  border-right: 3px solid #333;
 }
