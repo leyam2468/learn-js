@@ -9,7 +9,7 @@ body {
   color: white;
   background-color: #121212;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  height: 5000px;
+  height: 3000px;
 }
 
 body::-webkit-scrollbar {
@@ -28,50 +28,314 @@ a {
   text-decoration: none;
 }
 
-.banner {
+.btns {
   height: 100vh;
   background-color: black;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  position: relative;
-}
-
-.banner .btn {
-  padding: 10px 50px;
-  border-radius: 10px;
-  background-color: transparent;
-  border: 1px solid #555;
+  padding: 20px;
+  text-transform: uppercase;
   font-size: 1.3rem;
-  font-weight: bold;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  font-weight: 400;
+  letter-spacing: 3px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.btns > span {
+  padding: 10px 30px;
+  background-color: #121212;
+  color: red;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  -webkit-box-shadow: 0px 2px 5px #747474;
-          box-shadow: 0px 2px 5px #747474;
-  position: absolute;
-  bottom: 50%;
-  right: 50%;
-  -webkit-transform: translateX(50%) translateY(50%);
-          transform: translateX(50%) translateY(50%);
 }
 
-.banner .btn:hover {
-  background-color: red;
+.btns > span:hover {
+  color: #fff;
+  background-color: black;
 }
 
-.banner .active {
+.btns .btn-scrol {
+  border: 1px solid red;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  bottom: 90%;
+  right: 90%;
+}
+
+.btns .activeScrol {
   position: fixed;
   bottom: 20px;
   right: 20px;
   -webkit-transform: unset;
           transform: unset;
   border-radius: 50%;
-  padding: 10px;
-  background-color: darkred;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  padding: 15px;
+  background-color: #000;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.btns .btn1 {
+  border-right: 2px solid red;
+}
+
+.btns .btn2 {
+  border-left: 2px solid red;
+}
+
+.btns .btn3 {
+  border-top: 2px solid red;
+}
+
+.btns .btn4 {
+  border-bottom: 2px solid red;
+}
+
+.btns .btn5 {
+  position: relative;
+  display: inline-block;
+}
+
+.btns .btn5 > span {
+  position: absolute;
+  display: block;
+  background-color: red;
+}
+
+.btns .btn5 span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.btns .btn5 span:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.btns .btn5 span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.btns .btn5 span:nth-child(4) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.btns .btn5:hover {
+  background-color: #000;
+  color: white;
+}
+
+.btns .btn5:hover span:nth-child(1) {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.btns .btn5:hover span:nth-child(2) {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.btns .btn5:hover span:nth-child(3) {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.btns .btn5:hover span:nth-child(4) {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.btns .btn6 {
+  position: relative;
+}
+
+.btns .btn6 > span {
+  position: absolute;
+  background-color: red;
+}
+
+.btns .btn6 span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.btns .btn6 span:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.btns .btn6 span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.btns .btn6 span:nth-child(4) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
+.btns .btn6:hover span:nth-child(1) {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.btns .btn6:hover span:nth-child(2) {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.btns .btn6:hover span:nth-child(3) {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.btns .btn6:hover span:nth-child(4) {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
 }

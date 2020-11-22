@@ -1,0 +1,58 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	color: black;
+	background-color: whitesmoke;
+	font-family: "Open Sans", "Helvetica Neue", sans-serif;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	&::-webkit-scrollbar {
+		width: 0.25rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #1e1e24;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #d63031;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+.app-title {
+	font-size: 5rem;
+	font-weight: bold;
+	span {
+		color: red;
+	}
+}
+.notification {
+	background-color: rgb(245, 40, 40);
+	padding: 5px;
+	text-align: center;
+	width: 50%;
+	border-radius: 3px;
+	color: white;
+	font-size: 1.5rem;
+	display: none;
+}
+
+.temperature-value {
+	font-size: 5rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+.temperature-description {
+	font-size: 3rem;
+}
+.location {
+	font-size: 3rem;
+}

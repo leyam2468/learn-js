@@ -1,8 +1,10 @@
-let x = document.querySelector(".btn");
+let x = document.querySelector(".btn-scrol");
 window.onscroll = function () {
 	if (pageYOffset >= x.offsetTop) {
-		x.classList.add("active");
+		x.classList.add("activeScrol");
+		x.innerHTML = "X";
 	} else if (pageYOffset < 100) {
-		x.classList.remove("active");
+		x.classList.remove("activeScrol");
+		x.innerHTML = "Scroll";
 	}
 };

@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: black;
+  background-color: whitesmoke;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d63031;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-title {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.app-title span {
+  color: red;
+}
+
+.notification {
+  background-color: #f52828;
+  padding: 5px;
+  text-align: center;
+  width: 50%;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.temperature-value {
+  font-size: 5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.temperature-description {
+  font-size: 3rem;
+}
+
+.location {
+  font-size: 3rem;
+}
