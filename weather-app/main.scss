@@ -63,3 +63,22 @@ a {
 .location {
 	font-size: 3rem;
 }
+
+@media (max-width: 450px) {
+	.app-title {
+		font-size: 3rem;
+	}
+	.notification {
+		font-size: 1rem;
+	}
+
+	.temperature-value {
+		font-size: 4rem;
+	}
+	.temperature-description {
+		font-size: 2rem;
+	}
+	.location {
+		font-size: 2rem;
+	}
+}
