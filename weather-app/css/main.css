@@ -7,7 +7,9 @@
 
 body {
   color: black;
-  background: linear-gradient(45deg, #1e1e1e, #a41414);
+  text-shadow: 2px 2px white;
+  background: url(https://www.baenegocios.com/__export/1595440835383/sites/cronica/img/2020/07/22/depositphotos_61868743_xl-2015_x1x.jpg?__scale=c:transparent,w:375,h:211,t:3,p:0,q:80);
+  background-size: cover;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   height: 100vh;
   display: -webkit-box;
