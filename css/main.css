@@ -228,7 +228,7 @@ a {
           flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-image: url(https://news.efinancialcareers.com/binaries/content/gallery/efinancial-careers/articles/2019/03/programmer.jpg);
+  background-image: url(https://impactcee.com/wp-content/uploads/2018/02/pexels-photo-276452.jpeg);
   background-size: cover;
   background-position: center center;
 }
@@ -244,8 +244,28 @@ a {
 
 .home h3 {
   font-size: 2.8rem;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
 }
 
-.home h3 span {
-  color: red;
+@media (max-width: 420px) {
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5px;
+  }
+  .home h2 {
+    font-size: 3rem;
+  }
+  .home h3 {
+    font-size: 1.5rem;
+  }
 }
