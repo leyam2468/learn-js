@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: #121212;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d63031;
+}
+
+a {
+  text-decoration: none;
+}
+
+.board {
+  background: radial-gradient(ellipse at center, #400303 0%, #000000 70%);
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+}
+
+.board.x {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.board.x .cell:not(.x):not(.o):hover {
+  position: relative;
+  color: rgba(255, 255, 255, 0.13);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 300ms linear;
+  transition: 300ms linear;
+}
+
+.board.x .cell:not(.x):not(.o):hover::before {
+  content: "X";
+  position: absolute;
+}
+
+.board.o {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.board.o .cell:not(.x):not(.o):hover {
+  position: relative;
+  color: rgba(255, 255, 255, 0.13);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 300ms linear;
+  transition: 300ms linear;
+}
+
+.board.o .cell:not(.x):not(.o):hover::before {
+  content: "O";
+  position: absolute;
+}
+
+.board .cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.board .cell.x, .board .cell.o {
+  cursor: not-allowed;
+}
+
+.board .cell.x {
+  position: relative;
+  text-shadow: 1px 1px 12px #de0000bd;
+}
+
+.board .cell.x::before {
+  content: "X";
+  position: absolute;
+}
+
+.board .cell.o {
+  position: relative;
+  text-shadow: 1px 1px 12px #00881ebd;
+}
+
+.board .cell.o::before {
+  content: "O";
+  position: absolute;
+}
+
+.board .cell:first-child, .board .cell:nth-child(2), .board .cell:nth-child(3) {
+  border-top: none;
+}
+
+.board .cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.board .cell:nth-child(3n) {
+  border-right: none;
+}
+
+.board .cell:last-child, .board .cell:nth-child(7), .board .cell:nth-child(8) {
+  border-bottom: none;
+}
+
+.status {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+.status.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.status .status-msg {
+  font-size: 5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.status .status-msg::first-letter {
+  color: red;
+}
+
+.status button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+  text-transform: uppercase;
+  margin: 20px 0;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  outline: none;
+}
+
+.status button:hover {
+  background-color: green;
+}
