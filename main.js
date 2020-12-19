@@ -40,6 +40,11 @@ const menuApps = [
 		icon: "img/write.svg",
 	},
 	{
+		name: "BTN Effect",
+		href: "btn-scroll-ef/index.html",
+		icon: "img/button.svg",
+	},
+	{
 		name: "Rock Paper Scissors",
 		href: "rock-paper-scissors/index.html",
 		icon: "img/paper.svg",
@@ -56,9 +61,32 @@ const menuApps = [
 	},
 ];
 
+const sitesApps = [
+	{
+		name: "Weather App",
+		href: "weather-app/index.html",
+		icon: "img/snowing.svg",
+	},
+	{
+		name: "Music app v1",
+		href: "music1/index.htm",
+		icon: "img/music.svg",
+	},
+	{
+		name: "Music app v2",
+		href: "music2/index.htm",
+		icon: "img/soundcloud.svg",
+	},
+];
+// Web Application
 const OpenAppsBTN = document.querySelector("#open-btn-apps");
 const CloseAppsBTN = document.querySelector("#close-btn-apps");
 const AppsSidenav = document.querySelector("#apps-sidenav");
+
+// WebSites
+const OpenSitesBTN = document.querySelector("#open-btn-sites");
+const CloseSitesBTN = document.querySelector("#close-btn-sites");
+const SitesSidenav = document.querySelector("#sites-sidenav");
 
 OpenAppsBTN.addEventListener("click", () => {
 	AppsSidenav.style.left = "0";
@@ -68,29 +96,19 @@ CloseAppsBTN.addEventListener("click", () => {
 });
 
 menuApps.forEach((element) => {
-	let = menuItem = NavEL(element);
+	let = menuItem = `
+	<a href="${element.href}" class="main-item">
+        <div class="icon">
+            <img src="${element.icon}" alt="" width="100%" />
+		</div>
+		<div class="text">${element.name}</div>
+    </a>`;
 
 	const AppsSlienavManu = document.querySelector("#AppsSlienavManu");
 	AppsSlienavManu.innerHTML += menuItem;
 });
 
 // Sites Part
-const sitesApps = [
-	{
-		name: "Coming Soon",
-		href: "calculater/index.html",
-		icon: "img/calculator.svg",
-	},
-	{
-		name: "Coming Soon",
-		href: "qr-code-generator/index.htm",
-		icon: "img/qr.svg",
-	},
-];
-
-const OpenSitesBTN = document.querySelector("#open-btn-sites");
-const CloseSitesBTN = document.querySelector("#close-btn-sites");
-const SitesSidenav = document.querySelector("#sites-sidenav");
 
 OpenSitesBTN.addEventListener("click", () => {
 	SitesSidenav.style.right = "0";
@@ -100,18 +118,14 @@ CloseSitesBTN.addEventListener("click", () => {
 });
 
 sitesApps.forEach((element) => {
-	let menuItem = NavEL(element);
-
-	const SitesSlienavManu = document.querySelector("#SitesSlienavManu");
-	SitesSlienavManu.innerHTML += menuItem;
-});
-
-function NavEL(element) {
-	return `
+	let menuItem = `
 	<a href="${element.href}" class="main-item">
 		<div class="text">${element.name}</div>
         <div class="icon">
             <img src="${element.icon}" alt="" width="100%" />
-        </div>
+		</div>
+		
     </a>`;
-}
+	const SitesSlienavManu = document.querySelector("#SitesSlienavManu");
+	SitesSlienavManu.innerHTML += menuItem;
+});
