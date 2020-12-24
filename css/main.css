@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -5,10 +6,15 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   color: white;
   background-color: #121212;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   height: 2000px;
 }
 
@@ -24,14 +30,9 @@ body::-webkit-scrollbar-thumb {
   background: #d63031;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
 .navbar {
   z-index: 99;
-  position: absolute;
+  position: fixed;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,8 +43,11 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(255, 0, 0, 0)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 0, 0, 0));
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(18%, rgba(0, 0, 0, 0.871508)), color-stop(34%, rgba(0, 0, 0, 0.773469)), color-stop(50%, rgba(0, 0, 0, 0.728651)), color-stop(69%, rgba(0, 0, 0, 0.57459)), color-stop(86%, rgba(0, 0, 0, 0.30008)), to(rgba(0, 0, 0, 0.241256)));
+  background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.871508) 18%, rgba(0, 0, 0, 0.773469) 34%, rgba(0, 0, 0, 0.728651) 50%, rgba(0, 0, 0, 0.57459) 69%, rgba(0, 0, 0, 0.30008) 86%, rgba(0, 0, 0, 0.241256) 100%);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .navbar .logo {
@@ -53,8 +57,7 @@ a {
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
-  border-bottom: 2px solid red;
-  text-shadow: 0px 2px 15px #f8b9b9c0, 0px 4px 20px #cccccc79, 0px 6px 25px #ffffff7c;
+  text-shadow: 0px 2px 15px #f8b9b963, 0px 4px 20px #cccccc41;
 }
 
 .navbar .logo span {
@@ -86,7 +89,7 @@ a {
 
 .navbar .apps:hover,
 .navbar .sites:hover {
-  color: #b40000;
+  color: red;
 }
 
 .navbar .apps:hover::before,
@@ -98,7 +101,7 @@ a {
 
 .navbar .apps:hover svg,
 .navbar .sites:hover svg {
-  fill: #b40000;
+  fill: red;
 }
 
 .navbar .apps::before,
@@ -577,9 +580,8 @@ a {
           align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: url(/img/banner1.jpg);
+  background: url(/img/banner1.jpg) no-repeat center fixed;
   background-size: cover;
-  background-attachment: fixed;
   position: relative;
 }
 
@@ -591,7 +593,8 @@ a {
   height: 100%;
   content: "";
   background: black;
-  background: linear-gradient(210deg, rgba(151, 0, 0, 0.2), rgba(0, 0, 0, 0.85) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.2)), color-stop(50%, rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0.2), rgba(0, 0, 0, 0.7) 50%);
 }
 
 .banner .banner-text {
@@ -602,19 +605,18 @@ a {
 
 .banner .banner-text h6 {
   color: #dadada;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .banner .banner-text h6 span {
-  color: red;
+  color: #d63031;
   text-transform: uppercase;
   text-shadow: 1px 1px 20px rgba(255, 0, 0, 0.616);
 }
 
 .banner .banner-text h2 {
-  margin: 20px 0;
-  font-size: 6rem;
-  line-height: 90px;
+  margin: 5px 0;
+  font-size: 5rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -623,13 +625,13 @@ a {
 
 .banner .banner-text p {
   color: #dadada;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .banner .banner-text p span {
-  color: red;
+  color: #d63031;
   font-weight: bold;
-  text-shadow: 1px 1px 20px rgba(255, 0, 0, 0.616);
+  text-shadow: 1px 1px 15px rgba(255, 0, 0, 0.616);
 }
 
 .banner .banner-text .media {
@@ -650,12 +652,13 @@ a {
 }
 
 .banner .banner-text .contacts {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .banner .banner-text .contacts a {
   padding: 10px 30px;
-  border: 1px solid #999;
+  background-color: #d63031;
+  border: 1px solid #d63031;
   color: white;
   font-weight: bold;
   border-radius: 3px;
@@ -664,6 +667,8 @@ a {
 }
 
 .banner .banner-text .contacts a:hover {
+  background-color: transparent;
+  border-color: red;
   color: red;
 }
 

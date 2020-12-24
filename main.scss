@@ -1,14 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 // varibal
-$hover-color: rgb(180, 0, 0);
+$main-color: #d63031;
+$hover-color: red;
+$font-ubuntu: "Ubuntu", sans-serif;
+// Global Style
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
+a {
+	text-decoration: none;
+	color: white;
+}
+// Body Style
 body {
 	color: white;
 	background-color: #121212;
-	font-family: "Open Sans", "Helvetica Neue", sans-serif;
+	font-family: $font-ubuntu;
 	height: 2000px;
 	&::-webkit-scrollbar {
 		width: 0.25rem;
@@ -22,20 +31,28 @@ body {
 		background: #d63031;
 	}
 }
-a {
-	text-decoration: none;
-	color: white;
-}
 
+// NavBar Section
 .navbar {
 	z-index: 99;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	padding: 5px;
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(255, 0, 0, 0));
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.871508344548757) 18%,
+		rgba(0, 0, 0, 0.7734691288624824) 34%,
+		rgba(0, 0, 0, 0.7286512016916141) 50%,
+		rgba(0, 0, 0, 0.5745895770417542) 69%,
+		rgba(0, 0, 0, 0.3000797731201855) 86%,
+		rgba(0, 0, 0, 0.24125624370842091) 100%
+	);
+	transition: all 300ms ease;
 	.logo {
 		padding: 5px;
 		cursor: pointer;
@@ -43,9 +60,8 @@ a {
 		font-weight: bold;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		border-bottom: 2px solid red;
-		text-shadow: 0px 2px 15px #f8b9b9c0, 0px 4px 20px #cccccc79,
-			0px 6px 25px #ffffff7c;
+		//border-bottom: 2px solid red;
+		text-shadow: 0px 2px 15px #f8b9b963, 0px 4px 20px #cccccc41;
 		//animation: text-flicker-in-glow 10s ease-in-out 5ms infinite both;
 		span {
 			color: red;
@@ -393,15 +409,14 @@ a {
 	}
 }
 
-// Home
+// Banner Section
 .banner {
 	display: flex;
 	align-items: center;
 	width: 100%;
 	height: 100vh;
-	background-image: url(/img/banner1.jpg);
+	background: url(/img/banner1.jpg) no-repeat center fixed;
 	background-size: cover;
-	background-attachment: fixed;
 	position: relative;
 	&::before {
 		position: absolute;
@@ -412,9 +427,9 @@ a {
 		content: "";
 		background: rgb(0, 0, 0);
 		background: linear-gradient(
-			210deg,
-			rgba(151, 0, 0, 0.2),
-			rgba(0, 0, 0, 0.85) 50%
+			180deg,
+			rgba(255, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.7) 50%
 		);
 	}
 	.banner-text {
@@ -423,17 +438,16 @@ a {
 		width: 50%;
 		h6 {
 			color: rgb(218, 218, 218);
-			font-size: 2rem;
+			font-size: 1.8rem;
 			span {
-				color: red;
+				color: $main-color;
 				text-transform: uppercase;
 				text-shadow: 1px 1px 20px rgba(255, 0, 0, 0.616);
 			}
 		}
 		h2 {
-			margin: 20px 0;
-			font-size: 6rem;
-			line-height: 90px;
+			margin: 5px 0;
+			font-size: 5rem;
 			font-weight: bold;
 			text-transform: uppercase;
 			letter-spacing: 5px;
@@ -441,11 +455,11 @@ a {
 		}
 		p {
 			color: rgb(218, 218, 218);
-			font-size: 2rem;
+			font-size: 1.8rem;
 			span {
-				color: red;
+				color: $main-color;
 				font-weight: bold;
-				text-shadow: 1px 1px 20px rgba(255, 0, 0, 0.616);
+				text-shadow: 1px 1px 15px rgba(255, 0, 0, 0.616);
 			}
 		}
 		.media {
@@ -457,21 +471,24 @@ a {
 				color: rgb(218, 218, 218);
 				transition: color 500ms ease-in-out;
 				&:hover {
-					color: red;
+					color: $hover-color;
 				}
 			}
 		}
 		.contacts {
-			margin-top: 25px;
+			margin-top: 20px;
 			a {
 				padding: 10px 30px;
-				border: 1px solid #999;
+				background-color: $main-color;
+				border: 1px solid $main-color;
 				color: white;
 				font-weight: bold;
 				border-radius: 3px;
 				transition: color 500ms ease-in-out;
 				&:hover {
-					color: red;
+					background-color: transparent;
+					border-color: $hover-color;
+					color: $hover-color;
 				}
 			}
 		}
