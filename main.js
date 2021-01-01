@@ -89,25 +89,28 @@ const CloseSitesBTN = document.querySelector("#close-btn-sites");
 const SitesSidenav = document.querySelector("#sites-sidenav");
 
 const navBar = document.querySelector("#navbar");
+
 // Window Scrolling
 
 window.addEventListener("scroll", () => {
 	console.log(window.pageYOffset);
 	if (window.pageYOffset > 90) {
-		navBar.style.background =
-			"linear-gradient(rgb(128 2 2 / 15%), rgb(0 0 0 / 5%))";
-		navBar.style.padding = " 3px";
-	} else {
 		navBar.style.background = `linear-gradient(
 			180deg,
 			rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 0.871508344548757) 18%,
 			rgba(0, 0, 0, 0.7734691288624824) 34%,
 			rgba(0, 0, 0, 0.7286512016916141) 50%,
+			
 			rgba(0, 0, 0, 0.5745895770417542) 69%,
 			rgba(0, 0, 0, 0.3000797731201855) 86%,
 			rgba(0, 0, 0, 0.24125624370842091) 100%
 		)`;
+		navBar.style.padding = " 3px";
+	} else {
+		
+		navBar.style.background =
+			"linear-gradient(rgb(128 2 2 / 15%), rgb(0 0 0 / 5%))";
 	}
 });
 
