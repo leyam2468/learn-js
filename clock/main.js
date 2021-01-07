@@ -1,5 +1,4 @@
 
-// Clock********************************
 const deg = 6;
 const hr = document.querySelector("#hr");
 const mn = document.querySelector("#mn");
