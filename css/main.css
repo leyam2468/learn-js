@@ -44,8 +44,8 @@ body::-webkit-scrollbar-thumb {
       justify-content: space-around;
   padding: 5px;
   background: black;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(18%, rgba(0, 0, 0, 0.871508)), color-stop(34%, rgba(0, 0, 0, 0.773469)), color-stop(50%, rgba(0, 0, 0, 0.728651)), color-stop(69%, rgba(0, 0, 0, 0.57459)), color-stop(86%, rgba(0, 0, 0, 0.30008)), to(rgba(0, 0, 0, 0.241256)));
-  background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.871508) 18%, rgba(0, 0, 0, 0.773469) 34%, rgba(0, 0, 0, 0.728651) 50%, rgba(0, 0, 0, 0.57459) 69%, rgba(0, 0, 0, 0.30008) 86%, rgba(0, 0, 0, 0.241256) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(128, 2, 2, 0.15)), to(rgba(0, 0, 0, 0.05)));
+  background: linear-gradient(rgba(128, 2, 2, 0.15), rgba(0, 0, 0, 0.05));
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -725,3 +725,4 @@ body::-webkit-scrollbar-thumb {
     padding: 8px 20px;
   }
 }
+/*# sourceMappingURL=main.css.map */
